@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterworld/components/app_appbar.dart';
 import 'package:flutterworld/resources/images/strings/app_strings.dart';
 
 import 'center_home_body.dart';
@@ -24,26 +25,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     media = MediaQuery.of(context);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-        AppStrings.flutterWidgets,
-          style: TextStyle(fontSize: 30, fontStyle: FontStyle.italic),
-        ),
-        centerTitle: false,
-        actions: [
-          TextButton(
-            child: Text(AppStrings.writeStory),
-           onPressed: (){
-             //TODO::
-           },
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: IconButton(icon: Icon(Icons.people), onPressed: () {
-                  //TODO::
-            }),
-          )],
-      ),
+      appBar: AppAppbar(),
       body: _body(context),
     );
   }

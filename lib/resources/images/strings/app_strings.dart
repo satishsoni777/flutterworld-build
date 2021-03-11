@@ -7,4 +7,5 @@ class AppStrings {
   static const flutterWidgets ='Flutter widgets';
   static const writeStory='Write Story';
   static const flutterWord='Flutter World';
+  static const lutterWorld='lutterWorld';
 }

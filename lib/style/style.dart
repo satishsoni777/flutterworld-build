@@ -6,8 +6,10 @@ class Themes {
     return ThemeData(
       brightness: Brightness.dark,
       backgroundColor: Colors.black,
+      navigationRailTheme: NavigationRailThemeData(),
       appBarTheme: AppBarTheme(
-        color: Colors.black
+        color: Colors.black,
+        
       )
     );
   }

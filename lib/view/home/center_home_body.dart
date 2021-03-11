@@ -64,7 +64,22 @@ class HomeAppLogoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: MediaQuery.of(context).size.height * .24,
-        child: Image.network(AppImage.flutterLogo, fit: BoxFit.fitWidth));
+        child: Card(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              FlutterLogo(
+                size: MediaQuery.of(context).size.height * .18,
+              ),
+              Text(
+                AppStrings.lutterWorld
+                .trim(),
+                style: TextStyle(fontSize: 60.0, color: Colors.blue),
+              )
+            ],
+          ),
+        ));
   }
 }
 

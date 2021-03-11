@@ -13,9 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter World',
       theme: Themes.appThemeLight(),
-      home: HomePage(),
+      // home: HomePage(),
+      initialRoute: Routes.defaultRoute,
       debugShowCheckedModeBanner: false,
-      routes: Routes.getRoutes()
+      routes: Routes.getRoutes(),
+      onGenerateRoute: (s)=>Routes.onGeneratedRoutes(s)
     );
   }
 }
