@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterworld/components/dialogs/auth_dialog.dart';
 import 'package:flutterworld/resources/images/strings/app_strings.dart';
+import 'package:flutterworld/routes/navigator_manager.dart';
+import 'package:flutterworld/routes/routes.dart';
 
 class AppAppbar extends PreferredSize {
   AppAppbar() : super(preferredSize: Size(50.0, 50.0), child: Container());
@@ -16,7 +19,9 @@ class AppAppbar extends PreferredSize {
         TextButton(
           child: Text(AppStrings.writeStory),
           onPressed: () {
-            //TODO::
+            
+            NavigatorManager.next(Routes.blogPage, context);
+            // AppDialogs.of(context).logInDialog();
           },
         ),
         Padding(
