@@ -8,37 +8,33 @@ import 'package:flutterworld/style/app_colors.dart';
 class CenterBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
-      thickness: 10.0,
-      child: ListView(
-        children: [
-          HomeAppLogoWidget(),
-          const Divider(),
-          AspectRatio(
-            aspectRatio: 1.0,
-            child: GridView(
-                children: [
-                  FlutterCard(
-                    AppStrings.flutterObjQuestion,
-                  ),
-                  FlutterCard(
-                    AppStrings.flutterTutorial,
-                  ),
-                  FlutterCard(
-                    AppStrings.flutterWidgets,
-                    route: Routes.flutterWidgets,
-                  ),
-                  FlutterCard(AppStrings.flutterBlog),
-                  FlutterCard(AppStrings.allFlutterAppsLinks),
-                ],
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: (MediaQuery.of(context).size.width /
-                      MediaQuery.of(context).size.height),
-                  crossAxisCount: 3,
-                )),
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        const Divider(),
+        AspectRatio(
+          aspectRatio: 1.0,
+          child: GridView(
+              children: [
+                FlutterCard(
+                  AppStrings.flutterObjQuestion,
+                ),
+                FlutterCard(
+                  AppStrings.flutterTutorial,
+                ),
+                FlutterCard(
+                  AppStrings.flutterWidgets,
+                  route: Routes.flutterWidgets,
+                ),
+                FlutterCard(AppStrings.flutterBlog),
+                FlutterCard(AppStrings.allFlutterAppsLinks),
+              ],
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                childAspectRatio: (MediaQuery.of(context).size.width /
+                    MediaQuery.of(context).size.height),
+                crossAxisCount: 3,
+              )),
+        )
+      ],
     );
   }
 }
@@ -63,7 +59,7 @@ class HomeAppLogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: MediaQuery.of(context).size.height * .24,
+        height: MediaQuery.of(context).size.height * .3,
         child: Card(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -91,8 +87,8 @@ class SmallCardResposive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 240.0,
-      height: 100.0,
+      width: 340.0,
+      height: 400.0,
       child: Card(
         elevation: 8.0,
         shape:

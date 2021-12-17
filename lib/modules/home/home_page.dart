@@ -26,7 +26,18 @@ class HomePage extends StatelessWidget {
     media = MediaQuery.of(context);
     return Scaffold(
       appBar: AppAppbar(),
-      body: _body(context),
+      body: Scrollbar(
+          thickness: 4.0,
+          child: CustomScrollView(
+            slivers: [
+              
+              SliverList(
+                delegate: SliverChildBuilderDelegate((c, a) {
+                  return _body(context);
+                }, childCount: 1),
+              )
+            ],
+          )),
     );
   }
 }
